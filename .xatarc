@@ -1,0 +1,6 @@
+{
+  "databaseURL": "https://Ashutosh-_ico-s-workspace-3efijk.us-east-1.xata.sh/db/learn-rec",
+  "codegen": {
+    "output": "src/xata.ts"
+  }
+}

@@ -1,9 +1,15 @@
+"use client";
 
-import Image from 'next/image'
-import Link from 'next/link'
-import React from 'react'
+import { authClient } from "@/lib/auth-client";
+import Image from "next/image";
+import Link from "next/link";
+import React from "react";
 
 const Page = () => {
+
+  const handleSignIn = async()=>{
+      return await authClient.signIn.social({provider:"google"})
+  }
   return (
     <main className="sign-in">
       <aside className="testimonial">
@@ -62,8 +68,13 @@ const Page = () => {
             />
             <h1>LearN-Rec</h1>
           </Link>
-          <p>Create and Share Your very First <span>LearN-Rec Video</span>in no time !</p>
-          <button>
+          <p>
+            Create and Share Your very First <span>LearN-Rec Video</span>in no
+            time !
+          </p>
+          <button
+          onClick={handleSignIn}
+          >
             <Image
               src="/assets/icons/google.svg"
               alt="google-icon"
@@ -74,9 +85,9 @@ const Page = () => {
           </button>
         </section>
       </aside>
-      <div className='overlay'/>
+      <div className="overlay" />
     </main>
   );
-}
+};
 
-export default Page
+export default Page;
