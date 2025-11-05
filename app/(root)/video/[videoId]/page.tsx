@@ -3,7 +3,7 @@ import React from 'react'
 
 const Page = () => {
   return (
-    <div>Video Page</div>
+    <div>Video Details Page</div>
   )
 }
 
