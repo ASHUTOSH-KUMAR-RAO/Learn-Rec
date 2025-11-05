@@ -20,10 +20,10 @@ export const MAX_THUMBNAIL_SIZE = 10 * 1024 * 1024; // 10MB
 // Bunny CDN configuration
 export const BUNNY = {
   STREAM_BASE_URL: "https://video.bunnycdn.com/library",
-  STORAGE_BASE_URL: "https://sg.storage.bunnycdn.com/snapcast",
-  CDN_URL: "https://snapcast.b-cdn.net",
+  STORAGE_BASE_URL: "https://storage.bunnycdn.com/learn-rec",
+  CDN_URL: "https://learn-rec.b-cdn.net",
   EMBED_URL: "https://iframe.mediadelivery.net/embed",
-  TRANSCRIPT_URL: "https://vz-47a08e64-84d.b-cdn.net",
+  TRANSCRIPT_URL: "https://vz-5958d4f8-390.b-cdn.net",
 };
 
 // UI constants
