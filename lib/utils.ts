@@ -30,7 +30,7 @@ export const updateURLParams = (
 
 // Get env helper function
 export const getEnv = (key: string): string => {
-  const value = process.env[key];
+  const value = process.env.ARCJET_KEY;
   if (!value) throw new Error(`Missing required env: ${key}`);
   return value;
 };
