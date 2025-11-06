@@ -3,13 +3,30 @@
 import { authClient } from "@/lib/auth-client";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect } from "react";
+import { useRouter } from "next/navigation";
 
 const Page = () => {
+  const router = useRouter();
 
-  const handleSignIn = async()=>{
-      return await authClient.signIn.social({provider:"google"})
-  }
+  // Check agar already logged in hai toh root pe redirect karo
+  useEffect(() => {
+    const checkSession = async () => {
+      const session = await authClient.getSession();
+      if (session.data) {
+        router.push("/"); // Agar logged in hai toh root pe bhejo
+      }
+    };
+    checkSession();
+  }, [router]);
+
+  const handleSignIn = async () => {
+    const result = await authClient.signIn.social({ provider: "google" });
+    if (result.data) {
+      router.push("/"); // Login successful, root pe redirect karo
+    }
+  };
+
   return (
     <main className="sign-in">
       <aside className="testimonial">
@@ -72,9 +89,7 @@ const Page = () => {
             Create and Share Your very First <span>LearN-Rec Video</span>in no
             time !
           </p>
-          <button
-          onClick={handleSignIn}
-          >
+          <button onClick={handleSignIn}>
             <Image
               src="/assets/icons/google.svg"
               alt="google-icon"
