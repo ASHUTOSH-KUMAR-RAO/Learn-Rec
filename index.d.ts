@@ -242,7 +242,7 @@ declare interface ParamsWithSearch {
 }
 
 declare interface DropdownListProps {
-  options: string[];
+  options: readonly string[];
   selectedOption: string;
   onOptionSelect: (option: string) => void;
   triggerElement: ReactNode;
