@@ -1,6 +1,7 @@
-import { getXataClient } from "@/xata";
+import { drizzle } from "drizzle-orm/neon-http";
+import { neon } from "@neondatabase/serverless";
+import * as schema from "./schema";
 
-import { drizzle } from "drizzle-orm/xata-http";
-const xata = getXataClient();
+const sql = neon(process.env.DATABASE_URL!);
 
-export const db = drizzle(xata)
+export const db = drizzle(sql, { schema });
