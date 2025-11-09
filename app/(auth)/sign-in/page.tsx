@@ -53,25 +53,29 @@ const Page = () => {
               ))}
             </figure>
             <p>
-              LearN-Rec makes screen recording easy.from quick through to fall
-              presentation. it's fast and smooth.ans sharable in seconds{" "}
+              LearN-Rec makes screen recording effortless. From quick captures
+              to full presentations, it's fast, smooth, and shareable in
+              seconds.
             </p>
             <article>
               <Image
-                src="/assets/images/jason.png"
-                alt="jason"
+                src="/assets/images/rao.jpg"
+                alt="Ashutosh Kumar Rao"
                 height={64}
                 width={64}
                 className="rounded-full"
               />
               <div>
-                <h2>Jason Revier</h2>
-                <p>Product Designer and Nova </p>
+                <h2>Ashutosh Kumar Rao</h2>
+                <p>Modern Full-Stack Web Developer</p>
               </div>
             </article>
           </section>
         </div>
-        <p>LearN-ReC {new Date().getFullYear()}</p>
+        <p>
+          © {new Date().getFullYear()} LearN-Rec. Crafted with passion by
+          Ashutosh Kumar Rao. All rights reserved.
+        </p>
       </aside>
 
       <aside className="google-sign-in">
@@ -86,8 +90,8 @@ const Page = () => {
             <h1>LearN-Rec</h1>
           </Link>
           <p>
-            Create and Share Your very First <span>LearN-Rec Video</span>in no
-            time !
+            Create and share your very first <span>LearN-Rec Video</span> in no
+            time!
           </p>
           <button onClick={handleSignIn}>
             <Image
